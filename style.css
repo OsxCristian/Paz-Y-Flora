@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jacquard+12&family=Noto+Sans+Elymaic&family=Sevillana&display=swap");
+/*Codigo del Index*/
+.index {
+  background-image: url("../img/fondo3.jpg");
+  background-size: cover; /* Ajusta la imagen para cubrir toda la página */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* No repite la imagen */
+  background-attachment: fixed; /* La imagen de fondo no se desplaza con el contenido */
+  margin: 0; /* Elimina el margen del body */
+}
+
+.menu {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.menu ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #f8f4f4;
+  font-size: 1rem; /* Ajusta el tamaño del texto del menú */
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.menu ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #78866b;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.5s;
+}
+
+.menu ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #78866b;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.5s;
+}
+
+.menu ul li a:hover {
+  color: #0ef074;
+}
+
+.menu ul li a:hover:before,
+.menu ul li a:hover:after {
+  transform: scaleX(1);
+}
+
+.hola {
+  font-family: "Dancing Script";
+}
+
+/*Codigo de vision, mision y objetivo*/
+.mvo {
+  background-image: url("../img/fondo2.jpeg");
+  background-size: cover; /* Ajusta la imagen para cubrir toda la página */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* No repite la imagen */
+  background-attachment: fixed; /* La imagen de fondo no se desplaza con el contenido */
+  margin: 0; /* Elimina el margen del body */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container-fondo {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 50px; /* Agregar margen inferior al contenedor del texto */
+  margin-top: 120px;
+}
+
+/*Logo*/
+.header-bar .image-container {
+  width: 55px; /* Ajusta el tamaño del contenedor según tus necesidades */
+  height: 55px; /* Ajusta el tamaño del contenedor según tus necesidades */
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-image {
+  width: 100%;
+  height: auto;
+}
+
+.header-bar {
+  background-color: transparent; /* Color rosado */
+  padding: 15px 50px; /* Reduce el tamaño de la barra rosada */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite que el contenido se ajuste en múltiples líneas */
+  width: 100%; /* Extiende la barra a todo el ancho */
+  box-sizing: border-box; /* Incluye el padding en el ancho */
+  position: fixed; /* Fija la barra en la parte superior */
+  top: 0; /* Posiciona la barra en la parte superior */
+  left: 0; /* Alinea la barra a la izquierda */
+  z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+}
+
+.header-bar h1 {
+  margin: 0;
+  font-size: 2rem; /* Ajusta el tamaño del texto */
+  color: #ffffff;
+}
+
+/* Pie de pagina */
+.container-footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #334d38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Cambiar de fixed a relative */
+}
+
+.container-footer footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.footer-col h6 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.footer-col p {
+  margin: 5px 0;
+}
+
+.text-white {
+  color: white;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+section.fondo {
+  flex: 1;
+}
+
+/*Cards del index*/
+.card {
+  max-width: 18rem;
+  margin: 10px;
+}
+.card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.mb-4 {
+  margin-top: 20px;
+}
+ /* Estilo para el botón del menú (hamburguesa) */
+ .menu-toggle {
+  display: none; /* Ocultar el botón en dispositivos grandes */
+}
+.menu-toggle-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Mostrar el botón en dispositivos pequeños */
+  }
+  .menu {
+    display: none; /* Ocultar el menú en dispositivos pequeños */
+  }
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Cambiar la dirección de la lista a fila */
+    flex-direction: row; /* Alinear los elementos horizontalmente */
+    justify-content: center; /* Centrar horizontalmente las opciones */
+  }
+  .menu.show {
+    display: block; /* Mostrar el menú al hacer clic en el botón */
+    width: 100%; /* Aumentar el ancho del menú */
+  }
+  .menu.show ul li {
+    margin: 0 10px; /* Espacio entre las opciones */
+    font-size: 16px; /* Tamaño de fuente */
+  }
+  @media (max-width: 768px) {
+    .menu-toggle {
+display: none; /* Ocultar el botón en dispositivos grandes */
+}
+.menu-toggle-icon {
+width: 30px;
+height: 3px;
+background-color: #000;
+margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+.menu-toggle {
+display: block; /* Mostrar el botón en dispositivos pequeños */
+}
+.menu {
+display: none; /* Ocultar el menú en dispositivos pequeños */
+background-color: rgba(0, 0, 0, 0.8); /* Fondo negro transparente */
+padding: 0px; /* Añade espacio interno al menú */
+overflow-x: auto; /* Agrega desplazamiento horizontal si es necesario */
+width: auto; /* Ajusta el ancho del menú automáticamente */
+margin: 0 -40px; /* Añade un margen negativo para expandir el ancho horizontalmente */
+}
+
+.menu ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex; /* Cambiar la dirección de la lista a fila */
+justify-content: center; /* Centrar horizontalmente las opciones */
+flex-wrap: wrap; /* Permitir que las opciones se envuelvan en varias filas */
+}
+
+.menu.show ul li {
+margin: 0 0px; /* Espacio entre las opciones */
+font-size: 16px; /* Tamaño de fuente */
+}
+
+.menu.show ul li:nth-child(5) {
+width: 0%; /* Establecer el ancho al 100% para la quinta opción */
+text-align: center; /* Centrar el texto */
+}
+
+  }}}
